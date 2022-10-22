@@ -17,12 +17,24 @@ if ip ranges has opened ssh or rdp port you can start cracking
 
 # Installation : 
 
-```apt-get update && apt install python3 git ```
+```
+apt-get update && apt install python3 git 
+```
 
-```git clone https://github.com/BlackFoxTM/lin_msscaner```
+```
+git clone https://github.com/BlackFoxTM/lin_msscaner
+```
 
-```cd lin_msscaner```
+```
+cd lin_msscaner
+```
 
-```pip3 install -r requirements.txt```
+```
+pip3 install -r requirements.txt
+```
 
-```python3 lin_ms_scanner.py```
+```
+python3 lin_ms_scanner.py
+```
+
+# Support Telegram Channel : [Telegram Channel](https://t.me/BlackFoxSecurityTeam)
