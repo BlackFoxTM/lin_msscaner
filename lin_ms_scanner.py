@@ -12,6 +12,7 @@ async def ssh_scan():
         try:
             sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
             sock.connect((test,22))
+            sock.shutdown(2)
             open("success.txt","a").write(f"{ip}\n")
             print (Fore.GREEN + "Hit Now , Saved success.txt")
             sock.close()
@@ -37,6 +38,7 @@ async def rdp_scan():
         try:
             sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
             sock.connect((test,3389))
+            sock.shutdown(2)
             open("success.txt","a").write(f"{ip}\n")
             print (Fore.GREEN + "Hit Now , Saved success.txt")
             #sock.close()
