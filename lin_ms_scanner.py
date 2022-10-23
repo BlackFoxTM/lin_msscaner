@@ -23,6 +23,10 @@ async def ssh_scan():
             print (f"{Fore.RED} {test} is not open port : 22 ")
             sock.close()
             continue
+        except ConnectionRefusedError:
+            print (f"{Fore.RED} No connection could be made refused ! , skipping ... ")
+            sock.close()
+            continue
 
 async def rdp_scan():
 
@@ -35,7 +39,7 @@ async def rdp_scan():
             sock.connect((test,3389))
             open("success.txt","a").write(f"{ip}\n")
             print (Fore.GREEN + "Hit Now , Saved success.txt")
-            sock.close()
+            #sock.close()
         except socket.gaierror:
             print ("Failed ! ")
             sock.close()
